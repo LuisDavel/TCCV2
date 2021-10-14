@@ -1,0 +1,124 @@
+body{
+  margin: 0px;
+}
+
+input{
+  display: table-cell;
+  vertical-align: middle;
+  --decoration: none;
+}
+
+p.p1{
+  font-size: 36px;
+  font-family: roboto;
+  text-shadow: -2px 0 black, 0 2px black,
+      2px 0 black, 0 -2px black;
+  color: white;
+
+}
+
+
+.p2{
+  border-bottom: 3px solid black ;
+  display: inline-flex;
+  padding: 10px;
+  width: flex;
+  margin-right: 5%;
+  margin-left: 4%;
+  text-align: center;
+  font-size: 20px;
+}
+
+input[type=text] {
+  content: none;
+  width: 130px;
+  border-style: none;
+  border-bottom: 3px solid black ;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 20px;
+  transition: width 0.4s ease-in-out;
+}
+  
+input[type=text]:focus {
+  font-size: 20px;
+  color: Black;
+  background-color: aliceblue;
+  width: 60%;
+  border-bottom: 2px solid black ;
+}
+
+input[type=submit] {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.img{
+background-image: url('img/background_login.png') ;
+--background-image: url('img/login2.png') ;
+background-repeat: no-repeat;
+background-size:  100vw 100vh;
+background-color: #0b34b7;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+
+.corpo{
+  display: flex;
+  background-color: white;
+  width: 800px;
+  height: 600px;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 6px solid #041E9B;
+  perspective: 600px;
+}
+
+#z1 {
+  margin-top: -5vh;
+  animation: bounce .5s alternate infinite ease-in;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(1%);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+
+#z2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}

@@ -1,0 +1,147 @@
+body, html{
+    --margin-top: -5px;
+    --margin-bottom: -5px;
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: orange;
+    background-image:url('Slá/50-503036_dark-denim-pattern.png');
+}
+
+nav{
+    margin-top: -15px;
+
+}
+
+.horizontal{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 1135px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+    0.3em 1em 1em rgba(0,0,0,0.3);
+}
+
+.li-esquerda{
+    float: left;
+}
+
+.li-esquerda a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.li-esquerda a:hover {
+    background-color: rgb(173, 173, 173);
+  }
+
+
+.corpo {
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+    --align-items: center;
+    --justify-content: center;
+    --flex-wrap: wrap;
+    width: 600px;
+    height: 90vh;
+    overflow: auto;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0.3em 1em 1em rgba(0,0,0,0.3);
+    --margin: 0 auto;
+}
+.corpo::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+.corpo::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+    
+}
+.corpo::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
+    border-radius:10px;
+}
+
+
+
+.card{
+    border-radius: 5px;
+    padding-top: 10px;
+    width: 560px;
+    height: 100px;
+    display: table;
+
+    margin: 0 auto;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+    0  0 2px rgb(255,255,255),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    border: 1px solid white;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                    0 0  0 2px #a8a8a8(255,255,255),
+                    0.3em 1em 1em rgba(0,0,0,0.3);
+}                   
+
+p {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    --font-style: ;
+    margin-top: 4%;
+    margin-bottom: -5%;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+.div{
+    width: 350px;
+    height: 350px;
+    border-radius: 3px;
+    background: white;
+    padding: 15px;
+    float: right;
+    margin-right: 10%;
+    margin-left: -10%;
+    display: inline-block;
+    justify-content: center;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0.3em 1em 1em rgba(0,0,0,0.3);
+
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: inherit;
+    outline: none;
+    margin-bottom: 50px;
+    --margin-top: -50px;
+}
+
+.div2{
+    --margin-bottom: -50px;
+    width: 350px;
+    height: 150px;
+    border-radius: 3px;
+    background: white;
+    padding: 15px;
+    float: bottom;
+    margin-right: 10%;
+    margin-left: -10%;
+    display: inline-block;
+    justify-content: center;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0.3em 1em 1em rgba(0,0,0,0.3);
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: inherit;
+    outline: none;
+}
+
+.ajuda{
+    float: right;
+    padding: 15px;
+}

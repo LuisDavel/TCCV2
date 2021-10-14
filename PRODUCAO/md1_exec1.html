@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="md1_style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <title>Aprendendo com escolhas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="acao" style="background-image: url('../HOMOLOGA/img/Captura\ de\ tela\ 2021-10-10\ 154613.png');">
+            <div class="droped" >
+                <p id="yy" value= "2">aa</p>
+                <button onclick="abreVideo()" class="w3-button w3-black">A</button>
+
+                
+            </div>
+        </div>
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal"> 
+                    <span onclick="fecharVideo()" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2></h2>
+                </header>
+                <div class="w3-container">
+                  <video id="video" width="320" height="240" controls="controls">
+                        <source src="../HOMOLOGA/img/2021-08-12 20-04-26.mp4" type="video/mp4">
+                  </video>
+                </div>              
+            </div>
+        </div>
+
+        <div class="escolhas">
+            <div class="droped" style="width: 80%; justify-content: inline;">
+                <div class="drag" draggable="true" value= "1">
+                    <img src="../HOMOLOGA/img/21ab706902567bd0c10ba01c61d7541e-silhueta-do-icone-da-escada.png" style="width: 80px;" alt=" 1">
+                </div>
+                <div class="drag" draggable="true" value= "2">
+                    <img src="#" alt=" 2">
+                </div>
+                <div class="drag" draggable="true" value= "3">
+                    <img src="#" alt=" 3">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js" defer></script>
+
+
+</body>
+</html>

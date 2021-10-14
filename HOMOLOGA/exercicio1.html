@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <button > Gerar </button>
+  
+  <p id="demo"></p> 
+
+  <p id="demo1"></p> 
+
+  <img id="img1"  onclick="gerar()" src="img/Gifs animados Dado 8.gif" alt="">
+  <br>
+  <br>
+
+  <p id="demo2"> Qual numero caiu ? </p>
+  <input onchange="fatora()" type="text" id="text">
+
+
+
+</body>
+</html>
+
+
+<script>
+
+  var img = document.getElementById('img1');
+  function gerar() {
+      x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("demo").innerHTML = x;
+      switch(x){
+        case 1:
+          document.getElementById("demo").innerHTML = x;
+          console.log('Var função random: ' + x)
+          img.setAttribute('src', 'img/heroi.png')
+          break;
+        
+        case 2: 
+          document.getElementById("demo").innerHTML = x;
+          img.setAttribute('src', 'img/heroi.png')
+          console.log('Var função random: ' + x)
+      
+          break;
+      };
+  }
+ 
+  function fatora(){
+    var acerto = document.getElementById("text").value;
+    console.log('Var função acerto: ' + acerto)
+    if(x == acerto ){
+      img.setAttribute('src', 'img/heroi.png')
+      console.log('Var da função random: ' + x)
+      document.getElementById("demo1").innerHTML = x
+
+    }
+  }
+
+</script>

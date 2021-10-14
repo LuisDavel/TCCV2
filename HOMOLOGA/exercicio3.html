@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text]{
+            margin: 0px;
+            border: none;
+            width: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>| 2 |</th>
+                <th> | 3 |</th>
+                <th> | 4 |</th>
+            </tr>
+            <tr>
+               <td>| 3 |</td>
+               <td>| 4 |</td>
+               <td>| 5 |</td>
+            </tr> 
+            <tr>
+                <th>| 6 |</th>
+                <th>| 12 |</th>
+                <th><input id="valor" type="text" placeholder="|?|" onchange="resultado()"> </th>
+            </tr>
+
+        </table>
+        <p id="result_final"></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <table>
+            <tr>
+                <th>ESCOLHA A IMAGEM CERTA QUE SIGA O PADRÃO ACIMA</th>
+            </tr>
+            <tr>
+                <td><img src="" alt="1"></td>
+                <td><img src="" alt="2"></td>
+                <td><img src="" alt="3"></td>
+            </tr> 
+            <tr>
+                <td><img src="" alt="1" value="2"></td>
+                <td><img src="" alt="2" value="2"></td>
+                <td><img src="" alt="3" value="2"></td>
+            </tr> 
+            <tr>
+                <td><img onclick="click2()"  id="valor2" src="" alt="1" value="2"></td>
+                <td><img onclick="click2()"  id="valor2" src="" alt="2" value="2"></td>
+                <td><img onclick="click2()" id="valor2" src="" alt="?" value="1" ></td>
+            </tr> 
+        </table>
+        <p id="result_final"></p>
+    </div>
+    
+
+</body>
+</html>
+<script>
+    function resultado(){
+        var valor = document.getElementById("valor").value;
+        var  result = document.getElementById("result_final");
+        console.log(valor);
+        if(valor == 20 ){
+            console.log('Valor no IF: ' + valor)
+            result.innerHTML = "SUCESSO FUNCTION resultado -- Valor: " + valor
+        }else{
+            console.log('Valor no IF: ' + valor)
+            result.innerHTML = "ERROU FUNCTION resultado -- Valor: " + valor     
+        }
+    }
+
+
+    function click2(){
+        var valor = 0;
+        var valor_atr = 0;
+        var result = '';
+
+        valor = document.getElementById("valor2")
+        valor_atr = valor.getAttribute("value")
+        result = document.getElementById("result_final");
+
+        console.log(valor_atr)
+        if(valor_atr == 1){
+            console.log('Valor no IF: ' + valor_atr)
+            result.innerHTML = ("SUCESSO FUNCTION CLICK -- Valor: " + valor_atr)
+            valor = 0;
+            valor_atr = 0;
+        }else{
+            console.log('Valor no IF: ' + valor_atr)
+            result.innerHTML = ("ERROU FUNCTION CLICK -- Valor: " + valor_atr)
+            valor = 0;
+            valor_atr = 0;
+        }
+
+    }
+
+</script>

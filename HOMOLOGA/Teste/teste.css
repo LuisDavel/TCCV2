@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+    background-color: lightseagreen;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.corpo{
+    display: flex;
+    background-color: lightgreen;
+    width: 800px;
+    height: 600px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.caixa{
+  width: 358px;
+  height: 400px;
+  background-image: url('../img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png');
+  background-repeat:repeat-x;
+}
+
+.caixa:hover{
+  width: 368px;
+  height: 400px;
+  background-image: url('../img/fechada.png');
+  background-repeat:repeat-x;
+
+}
+
+    
+   
