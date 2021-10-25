@@ -1,5 +1,6 @@
+/// --- SEMPRE QUE A JANELA INICIAR
 window.addEventListener('load', (event) => {
-    random();
+    random(); // ABRE A FUNÇÃO RANDOM
 });
 
 var conta_erro = 0;
@@ -26,7 +27,7 @@ function random() {
         c = 0;
 
     for(var i = 1; i< 4; i++){
-        x = Math.floor((Math.random() * 5) + 1);
+        x = Math.floor((Math.random() * 20) + 1);
         //console.log(x)
         
         if(i == 1){
@@ -76,7 +77,7 @@ var temporiza;
 $("#valor").on("input", function(){
    clearTimeout(temporiza);
    temporiza = setTimeout(function(){
-        resultado();
+        resultado(); // FUNçÃO A SER DISPARADA
    }, 1000);
 });
 
@@ -106,6 +107,5 @@ function resultado(){
         }else{
             msg('certo: '  + conta_acerto + ' ' + ' Errado: ' + conta_erro)
         }
-
     }
 }

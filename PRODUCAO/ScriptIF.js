@@ -57,7 +57,7 @@ function log(message) {
             abreVideo();
             //log('DOPREI: ' + valor)
         }
-            //log('DOPREI: ' + valor)
+            log('DOPREI: ' + valor)
             
           //event.target.style.background = "";
           dragged.parentNode.removeChild( dragged );
