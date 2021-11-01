@@ -14,12 +14,20 @@ body{
 .container{
     width: 100vw;
     height: 100vh;
-    border: 1px solid blue;
+    --border: 1px solid blue;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.img{
+    background-image: url('../HOMOLOGA/img/background_login.png') ;
+    --background-image: url('img/login2.png') ;
+    background-repeat: no-repeat;
+    background-size:  100vw 100vh;
+    background-color: #0b34b7;
 }
 
 .acao{
@@ -28,6 +36,7 @@ body{
     width: 90%;
     height: 70%;
     border-radius: 15px;
+    --flex-direction: inline;
     justify-content: center;
     align-items: center;
     border: 6px solid #041E9B; 
@@ -46,15 +55,24 @@ body{
     border: 6px solid #041E9B; 
 }
 
-.droped{
+.dropzone{
+    margin-left: -50px;
     display: flex;
     flex-direction: inline;
-    margin: 0 10px;
     justify-content: center;
     align-items: center;
-    border: 1px solid grey;
-    width: 400px;
-    height: 120px;
+    height: 200px;
+
+}
+
+.dropzone2{
+    margin-left: -50px;
+    display: flex;
+    flex-direction: inline;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+
 }
 
 .drag{
@@ -73,8 +91,4 @@ body{
     border: 1px solid green;
     width: 50px;
     height: 50px;  
-}
-
-.over{
-    background-image: url('../HOMOLOGA/img/embalagem-de-entrega-em-caixa-aberta-e-fechada_106065-100.png');
 }

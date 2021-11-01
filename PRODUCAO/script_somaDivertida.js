@@ -33,7 +33,7 @@ function random() {
 
     for(var i = 1; i< 4; i++){
 
-        x = Math.floor((Math.random() * 90) + 1);
+        x = Math.floor((Math.random() * 5) + 1);
         //msg('random: '+x)
         
         if(i == 1){
