@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+}
+
+table{
+    font-size: 26px;
+
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    --border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img{
+    background-image: url('../HOMOLOGA/img/background_login.png') ;
+    --background-image: url('img/login2.png') ;
+    background-repeat: no-repeat;
+    background-size:  100vw 100vh;
+    background-color: #0b34b7;
+}
+
+.corpo{
+    display: flex;
+    background-color: white;
+    width: 800px;
+    height: 800px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 6px solid #041E9B;
+}
+
+img{
+    height: 150px;
+}
+
+input[type=text]{
+    border: none;
+    border-bottom: 3px solid black;
+    font-size: 16px;
+    height: 50px;
+
+}

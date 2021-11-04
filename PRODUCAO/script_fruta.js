@@ -1,6 +1,7 @@
 /// --- SEMPRE QUE A JANELA INICIAR
 window.addEventListener('load', (event) => {
     random(); // ABRE A FUNÇÃO RANDOM
+    random_dev();
 });
 
 var conta_erro = 0;
@@ -8,7 +9,7 @@ var conta_acerto = 0;
 var tentativa = 0;
 
 function msg (msg){
-    console.log ('Resultado:  ' + msg)
+    console.log ('=>:  ' + msg)
 }
 
 
@@ -27,7 +28,7 @@ function random() {
         c = 0;
 
     for(var i = 1; i< 4; i++){
-        x = Math.floor((Math.random() * 20) + 1);
+        x = Math.floor((Math.random() * 5) + 1);
         //console.log(x)
         
         if(i == 1){
@@ -40,17 +41,10 @@ function random() {
             //msg('If' + i +' ' + a) 
 
         }else if(i == 2){
-            if(x & 1){
-                //msg('Log Numero2 impar: '+ x);
-                var  x = x + 1;
-                var y = x + x;
-                //document.getElementById("numero" + i).innerHTML = x;
-                //msg('Log Numero2 impar arrumado: ' + x +  ' soma: ' + y);
-            }else{
+              
                 var y = x + x;
                 //document.getElementById("numero" + i).innerHTML = x;
                 //msg('Log par: ' + x +  ' soma: ' + y)
-            }
             
             b = x;
             //msg('If' + i +' ' + b)  
@@ -67,10 +61,67 @@ function random() {
     
     result_final = a + ((b/2) * c)
     
-    msg('Result Final ' + result_final)
+    //msg('Result Final ' + result_final)
 
     //document.getElementById('result_final').innerHTML = result_final
     
+}
+
+
+function random_dev(){
+    operador = 0;
+    operador2 = 0;
+    
+    for(var i = 1; i<= 2; i++){
+
+        operador_random = Math.floor((Math.random() * 2) + 1);
+
+        msg('FOR ' + i)
+       
+       
+        msg('Random: ' + operador_random);
+
+        if(i == 1){
+            if(operador_random == 1){
+               
+                operador = '+'
+                document.getElementById('muda' + i).innerText = operador;
+            }else{
+               
+                operador = '-'
+                document.getElementById('muda' + i).innerText = operador;
+            }
+            msg(operador)
+        }else{
+            if(operador_random == 1){
+             
+                operador2 = '+'
+                document.getElementById('muda' + i).innerText = operador2;
+            }else{
+               
+                operador2 = '-'
+                document.getElementById('muda' + i).innerText = operador2;
+            }
+
+            msg(operador2)
+        }
+
+        result_final = eval (a +  operador + b + operador2 + c)
+        
+        // msg('Eu sou o 1: ' + operador_random + '\n' + ' Eu sou Random: ' + i)
+       
+    }
+   
+    if(result_final < 0){
+        msg('Resultado errado: ' + result_final)
+        result_final= result_final * -1;
+    }
+
+    
+    
+
+    
+    msg('Resultado final: ' + result_final)
 }
 
 var temporiza;

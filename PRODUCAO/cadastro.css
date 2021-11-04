@@ -115,7 +115,7 @@ input[type=submit]:hover {
 }
 
 .img{
-background-image: url('img/background_login.png') ;
+background-image: url('../HOMOLOGA/img/background_login.png') ;
 --background-image: url('img/login2.png') ;
 background-repeat: no-repeat;
 background-size:  100vw 100vh;

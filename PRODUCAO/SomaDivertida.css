@@ -1,5 +1,9 @@
+*{
+    margin: 0px;
+}
+
 .quadrado_teste{
-    border: 1px solid black;
+    border: 3px solid black;
     height: 150px;
     width: 150px;
     text-align: center;
@@ -15,13 +19,44 @@
     text-align: center;
     vertical-align: middle;
     display: table-cell;
+
+    
+}
+.img{
+    background-image: url('../HOMOLOGA/img/background_login.png') ;
+    --background-image: url('img/login2.png') ;
+    background-repeat: no-repeat;
+    background-size:  100vw 100vh;
+    background-color: #0b34b7;
 }
 
 .quadrado{
-    width: 150px;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
+}
+
+.corpo{
+    display: flex;
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 6px solid #041E9B;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    --border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 input:invalid {
