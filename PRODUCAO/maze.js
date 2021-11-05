@@ -14,6 +14,8 @@
  var HEIGHTS = [12, 16, 24];
  var WIDTHS = [24, 32, 48];
  var SQUARE_SIZES = [30, 25, 20];
+
+ var campo = 0;
  // Number of rows.
  var HEIGHT;
  // Number of columns.
@@ -65,10 +67,12 @@
    svg.setAttribute('width', SQUARE_SIZE * WIDTH + 1);
  
    // Start button is only for restart in this game, but add event handler now.
-   document.getElementById('start').addEventListener('click', startButton);
+   //document.getElementById('start').addEventListener('click', startButton);
    document.addEventListener('keypress', keyPress);
-   document.addEventListener('keydown', keyDown);
- 
+   //document.addEventListener('keydown', keyDown);
+   //document.addEventListener('keyup', keyup);
+
+
    // Start the first maze from a random place.
    avatar.x = Math.floor(Math.random() * WIDTH);
    avatar.y = Math.floor(Math.random() * HEIGHT);
@@ -301,30 +305,35 @@
      e.preventDefault();
    }
  }
+
+
  
+
  // Player is changing directions using the keyboard.
- function keyDown(e) {
-   if (isStartVisible || !isRunning || e.repeat) {
-     return;
-   }
-   switch (e.key) {
-     case 'ArrowLeft':
-       move(-1, 0);
-       break;
-     case 'ArrowRight':
-       move(1, 0);
-       break;
-     case 'ArrowUp':
-       move(0, -1);
-       break;
-     case 'ArrowDown':
-       move(0, 1);
-       break;
-     default:
-       return;
-   }
-   e.preventDefault();
- }
+
+
+//  function keyDown(e) {
+//    if (isStartVisible || !isRunning || e.repeat) {
+//      return;
+//    }
+//    switch (e.key) {
+//      case 'ArrowLeft':
+//        move(-1, 0);
+//        break;
+//      case 'ArrowRight':
+//        move(1, 0);
+//        break;
+//      case 'ArrowUp':
+//        move(0, -1);
+//        break;
+//      case 'ArrowDown':
+//        move(0, 1);
+//        break;
+//      default:
+//        return;
+//    }
+//    e.preventDefault();
+//  }
  
  // Move the avatar one step.
  function move(dx, dy) {
