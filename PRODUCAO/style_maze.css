@@ -57,7 +57,27 @@ textarea{
   border: none;
 }
 
+.bttn {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left:15px ;
+}
 
+.bttn:hover {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left:15px ;
+}
 
 /*// -------------------------- OUTRO SCIPRT // */
 
@@ -90,13 +110,14 @@ textarea{
   --width: 100%;
 }
 #landscape {
-  border: 5px solid black;
+  border: 2px solid black;
   display: block;
   margin: auto;
-  background-color: rgb(164, 164, 248);
+  background-color: #2E5FFF ;
 }
 .path {
-  fill: #2E5FFF;
+  fill: white ;
+  
 }
 #avatarPath {
   fill: none;

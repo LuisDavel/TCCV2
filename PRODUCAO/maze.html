@@ -25,8 +25,9 @@
         <div class="center">
            <div id="startDiv" >
                <button id="start"> 
-                <div>Start</div> 
+                <div></div> 
                   <div class="keys">Me ajude a chegar ao destino</div> 
+                  <div class="keys">Use comandos como: "Frente","Direita"</div> 
                 </button> 
            </div> 
 
@@ -37,10 +38,17 @@
                <g id="avatarLayer"></g>
              </svg>
            </div>
+           
+          
         </div>
+        
         <div>
-          <p>De comando ao heroi!</p>
-          <input type="text" id="campo" placeholder="Vá para frente, para atrás">
+          <form id="myForm">
+            <p>De comandos ao heroi!</p>
+            <input type="text" id="campo" placeholder="Vá para cima, para baixo"> 
+            <input class="bttn" type="button" onclick="gerar()" value="Rodar">
+          </form>
+          
           <br><br>
           <p>Comandos utilizados:</p>
           <textarea id="alltext"></textarea>
@@ -48,7 +56,14 @@
 
 
       </div>
-     
+      <textarea style="width: 400px;" readonly> -- COMANDOS PARA FAER O HEROI ANDAR  --
+      - Cima (para ir para cima)
+      - Baixo (para ir para baixo)
+      - Esquerda (para ir para esquerda)
+      - Direita (para ir para direita)
+      *Você pode mandar vários comandos separando por virgula.
+      Ex:. Cima, Baixo, Direta, Cima
+      </textarea>
       
     </div>
   </div>
@@ -59,63 +74,48 @@
 
 
 <script>
-  var campo = document.getElementById("campo");
-  var text = document.getElementById("alltext");
-  temporiza = 0;
 
-  
-  $("#campo").on("input", function(){
-    clearTimeout(temporiza);
-    temporiza = setTimeout(function(){
-      
-      keyup();
-    }, 500);
-  });
+
 
   function addLista(){
-    var insertText = $('#campo').val();
-    $('#alltext').append(insertText + '\n');
+      var insertText = $('#campo').val();
+      $('#alltext').append(insertText + '\n');
   }
 
 
-  function keyup(){
-    console.log(campo.value.toLowerCase());
+  function gerar(){
+    
+    
 
-    if(campo.value == ''){
-        return;
-      }  
-  
-      switch (campo.value.toLowerCase()) {
-        case 'esquerda':
-         // addText(this)
-         addLista()
-          campo.value = '';
-          move(-1, 0);
-          break;
-        case 'direita':
-          addLista()
-          move(1, 0);
-          campo.value = '';
-          break;
-        case 'cima':
-          addLista()
-          move(0, -1);
-          campo.value = '';
-          break;
-        case 'baixo':
-          addLista()
-          move(0, 1);
-          campo.value = '';
-          break;
-        default:
-          return;
+    var campo = document.getElementById('campo').value.toLowerCase();
+
+    if (campo == '' || campo == ' '){
+      return;
+    }
+
+ 	  var Array =  campo.split(",");
+       
+    for(var i = 0; i < Array.length; i++){
+	  	//console.log(Array[i])
+ 	    var	a = (Array[i].trim());
+    
+      if(a == 'esquerda'){
+        move(-1, 0);
+      }else if(a == 'direita'){
+        move(1, 0);
+          
+      }else if(a == 'cima'){
+        move(0, -1);
+      }else if(a == 'baixo'){
+        move(0, 1);
       }
-      //campo.preventDefault();
-  }
+	  }
+   
+    addLista();
+    document.getElementById("myForm").reset();
+  console.log(Array)
+}
 
-  // function addText() {
-  //     var targ = this.target || this.srcElement;
-  //     document.getElementById("alltext").value += targ.innerText;
-  // }
+
 
 </script>

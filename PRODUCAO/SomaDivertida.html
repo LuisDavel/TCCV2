@@ -6,13 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="SomaDivertida.css">
+    <link rel="stylesheet" href="dialogo.css">
     <title>Valor da fruta</title>
 </head>
 <body> 
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img  src="../HOMOLOGA/img/pergunta2.png" alt="" style="height: 150px; width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <p class="p1"> O evento é simples, apenas encontre o resultado na soma dos valores na vertical, MAS CUIDADO, os valores tem que oincidir igual a HORIZONTAL </p>
+         
+        </div>
+      
+      </div>
+
     <div class="img"> 
         <div class="container">
             <div class="corpo">
-                <div = class="quadrados">
+                <div class="quadrados">
                     <table>
                         <tr>
                             <td id="result1" class="quadrado" >Valor não calculado</th>
@@ -37,12 +51,14 @@
                     
                     </table>
                 </div>
+                <input type="submit" value="Validar" onclick="recebe_valor()"> 
             </div>
         
-            <button onclick="recebe_valor()">Clicka</button>
+            
         </div>
     </div>
 </body>
 
 <script src="script_somaDivertida.js" defer></script>
+<script src="dialogo_exerc.js" defer></script>
 </html>

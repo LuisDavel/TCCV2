@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="soma.css">
     <title>Cadastro</title>
 </head>
 <body>
-    <div id="fundo_background">
+    <div class="fundo_background">
         <div class="container">
 
             <div class="conteudo">
@@ -27,11 +27,16 @@
                         </tr> 
                         <tr>
                             <th>6</th>  
-                            <th>12</th>
-                            <th> </th>
-                            <th><inpt id="valor" type="text" placeholder="Resultado" onchange="resultado()"> </th>
+                            <th>2</th>
+                            <th>?</th>
+                            
                         </tr>
+                        
                     </table>
+                    
+                </div>
+                <div>
+                    <input id="valor" type="text" placeholder="Resultado" onchange="resultado()"> <input type="submit" value="Validar" onclick="recebe_valor()"> 
                 </div>
             </div>
         </div>

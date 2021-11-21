@@ -12,38 +12,42 @@
 <body>
     <div  class="img">
         <div class="container">
-            <div class="acao" style="background-image: url('../HOMOLOGA/img/Captura\ de\ tela\ 2021-10-10\ 154613.png');">
+            <div class="acao" style="background-image: url('../HOMOLOGA/img/Nsei.png'); background-repeat: no-repeat; background-size: 100%;
+            background-color: #0b34b7;;">
                 <div class="dropzone" >
                     <p id="yy" value= "2"></p>
                     <!--<button onclick="abreVideo()" class="w3-button w3-black">A</button>-->
                 </div>
             </div>
         <!-- VIDEO -->
-            <div id="id01" class="w3-modal">
-                <div class="w3-modal-content w3-animate-top w3-card-4">
-                    <header class="w3-container w3-teal"> 
-                        <img  onclick="fecharVideo()" src="https://img.icons8.com/material-rounded/50/000000/back--v1.png"/> Refazer 
-                        <h2></h2>
-                    </header>
-                    <div class="w3-container">
-                      <video id="video" width="900" height="800" controls="controls">
-                            <source src="../HOMOLOGA/img/2021-08-12 20-04-26.mp4" type="video/mp4">
-                      </video>
-                    </div>              
+            
+
+            <div id="id01" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  
+                  <div class="close" onclick="fecharVideo()" >&times; Refazer</div>
+                  <br>
+                  <br>
+                  <div>
+                     <video id="video" width="900" height="800" controls="controls">
+                     <source src="../HOMOLOGA/img/Gatinho.mp4" type="video/mp4">
+                   </div>
                 </div>
+              
             </div>
-        
+
+            
             <div class="escolhas">
-                <div class="dropzone" style="width: 80%; justify-content: inline;">
+                <div class="dropzone2" style="width: 80%; justify-content: inline;">
                 
                     <img src="../HOMOLOGA/img/21ab706902567bd0c10ba01c61d7541e-silhueta-do-icone-da-escada.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "1" style="width: 80px;" alt=" 1">
-                    <div class="drag"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "2">
-                        <img src="#" alt=" 2">
-                    </div>
-                
-                    <div class="drag" id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "3">
-                        <img src="#" alt=" 3">
-                    </div>
+
+                    <img src="../HOMOLOGA/img/Camaelastica.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "2" style="width: 80px;" alt=" 1">
+
+                    <img src="../HOMOLOGA/img/corda.png"  id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" value= "2" style="width: 80px;" alt=" 1">  
+                                        
                 
                 </div>
             </div>

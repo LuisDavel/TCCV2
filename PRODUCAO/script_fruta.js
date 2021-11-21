@@ -77,10 +77,7 @@ function random_dev(){
         operador_random = Math.floor((Math.random() * 2) + 1);
 
         msg('FOR ' + i)
-       
-       
         msg('Random: ' + operador_random);
-
         if(i == 1){
             if(operador_random == 1){
                
@@ -102,7 +99,6 @@ function random_dev(){
                 operador2 = '-'
                 document.getElementById('muda' + i).innerText = operador2;
             }
-
             msg(operador2)
         }
 
@@ -133,7 +129,6 @@ $("#valor").on("input", function(){
 });
 
 function resultado(){
-    
     var valor =  document.getElementById('valor').value;
     if(valor != ''){
         if(tentativa != 5){
